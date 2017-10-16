@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-login',
@@ -19,6 +19,6 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     console.log(1);
-    this.router.navigate(['/dashboard'], { relativeTo: this.route });
+    this.router.navigate(['/seller'], { relativeTo: this.route });
   }
 }
