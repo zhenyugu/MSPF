@@ -21,4 +21,8 @@ export class LoginComponent implements OnInit {
     console.log(1);
     this.router.navigate(['/seller'], { relativeTo: this.route });
   }
+
+  register() {
+    this.router.navigate(['/register'], { relativeTo: this.route });
+  }
 }

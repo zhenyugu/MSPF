@@ -1,0 +1,13 @@
+<form role="form" name="userForm">
+    <span class="required-identifier-after">name</span>
+    <div class="form-group has-feedback">
+        <input type="text" ng-model="ctrl.email" class="form-control" validator="email, required" />
+    </div>
+    <span class="required-identifier-after">phoneNumber</span>
+    <div class="form-group has-feedback">
+        <input type="text" ng-model="ctrl.phoneNumber" class="form-control" validator="number,required" />
+    </div>
+    <div class="form-group">
+        <button (click)="onSubmit()">注册</button>
+    </div>
+</form>
