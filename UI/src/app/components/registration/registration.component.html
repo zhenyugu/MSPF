@@ -1,13 +1,16 @@
-<form role="form" name="userForm">
-    <span class="required-identifier-after">name</span>
-    <div class="form-group has-feedback">
-        <input type="text" ng-model="ctrl.email" class="form-control" validator="email, required" />
-    </div>
-    <span class="required-identifier-after">phoneNumber</span>
-    <div class="form-group has-feedback">
-        <input type="text" ng-model="ctrl.phoneNumber" class="form-control" validator="number,required" />
-    </div>
-    <div class="form-group">
-        <button (click)="onSubmit()">注册</button>
-    </div>
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="checkbox">
+    <label>
+        <input type="checkbox"> Check me out
+      </label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
 </form>

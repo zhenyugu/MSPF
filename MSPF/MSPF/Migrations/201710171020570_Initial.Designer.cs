@@ -13,7 +13,7 @@ namespace MSPF.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201710151002539_Initial"; }
+            get { return "201710171020570_Initial"; }
         }
         
         string IMigrationMetadata.Source
