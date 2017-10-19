@@ -6,4 +6,4 @@ import { CommonModule } from '@angular/common';
   declarations: [],
   providers:    []
 })
-export class CrisisModule {}
+export class BuyerModule {}

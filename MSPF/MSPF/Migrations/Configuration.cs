@@ -63,8 +63,8 @@ namespace MSPF.Migrations
                 UserName = "admin",
                 Email = "admin@mspf.com",
                 EmailConfirmed = true,
-                FirstName = "admin",
-                LastName = "test",
+                //FirstName = "admin",
+                //LastName = "test",
                 Level = 1,
                 JoinDate = DateTime.Now
             };

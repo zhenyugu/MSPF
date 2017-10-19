@@ -27,8 +27,8 @@ namespace MSPF.Controllers
             {
                 UserName = createUserModel.Username,
                 Email = createUserModel.Email,
-                FirstName = createUserModel.FirstName,
-                LastName = createUserModel.LastName,
+                FirstName = "empty",
+                LastName = "empty",
                 Level = 3,
                 JoinDate = DateTime.Now.Date,
             };

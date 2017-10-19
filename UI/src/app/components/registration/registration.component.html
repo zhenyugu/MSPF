@@ -1,16 +1,29 @@
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="checkbox">
-    <label>
-        <input type="checkbox"> Check me out
-      </label>
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
+<div class="container">
+  <h1>Registration</h1>
+  <form (ngSubmit)="register()" #registrationForm="ngForm">
+    <div class="form-group">
+      <label for="uesrname">姓名</label>
+      <input type="text" class="form-control" id="uesrname" name="uesrname" [(ngModel)]="model.Username" required>
+    </div>
+
+    <div class="form-group">
+      <label for="name">电子邮箱</label>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="model.Email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="password">密码</label>
+      <input type="text" class="form-control" name="password" [(ngModel)]="model.Password" id="password">
+    </div>
+
+    <div class="form-group">
+      <label for="ConfirmPassword">确认密码</label>
+      <input type="text" class="form-control" name="ConfirmPassword" [(ngModel)]="model.ConfirmPassword" id="confirmPassword">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+</div>
+
+{{diagnostic}}

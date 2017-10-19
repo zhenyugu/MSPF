@@ -176,3 +176,4 @@ D:\Private\sourcecode\MSPF\MSPF\MSPF\bin\Microsoft.Owin.Cors.xml
 D:\Private\sourcecode\MSPF\MSPF\MSPF\bin\System.Web.Http.Owin.xml
 D:\Private\sourcecode\MSPF\MSPF\MSPF\obj\Debug\MSPF.Migrations.Initial.resources
 D:\Private\sourcecode\MSPF\MSPF\MSPF\obj\Debug\MSPF.csproj.GenerateResource.Cache
+D:\Private\sourcecode\MSPF\MSPF\MSPF\obj\Debug\MSPF.csprojResolveAssemblyReference.cache
