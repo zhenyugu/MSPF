@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { LoginService } from './login.service';
 
 
 @Component({
@@ -9,16 +10,20 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router, private route: ActivatedRoute, private loginService: LoginService) { }
 
-  username = 'zhenyu';
-  password = 'password';
+  username = '';
+  password = '';
 
   ngOnInit() {
   }
 
   onSubmit() {
-    this.router.navigate(['/seller'], { relativeTo: this.route });
+    this.loginService.login(this.username, this.password).then(data => {
+      console.log(data);
+      this.router.navigate(['/seller'], { relativeTo: this.route });
+    }
+    ).catch(error => { console.log(error); });
   }
 
   register() {

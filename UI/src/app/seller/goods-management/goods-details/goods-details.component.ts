@@ -8,12 +8,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class GoodsDetailsComponent implements OnInit {
   goods;
-  constructor(private router: Router) { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
   }
 
   Reject() {
-    this.router.navigate(['../']);
+    this.router.navigate(['../'], { relativeTo: this.route });
   }
 }

@@ -185,3 +185,4 @@ D:\Private\sourcecode\MSPF\MSPF\MSPF\bin\SendGrid.dll
 D:\Private\sourcecode\MSPF\MSPF\MSPF\bin\Microsoft.Owin.Security.Jwt.xml
 D:\Private\sourcecode\MSPF\MSPF\MSPF\bin\SendGrid.pdb
 D:\Private\sourcecode\MSPF\MSPF\MSPF\bin\SendGrid.xml
+D:\Private\sourcecode\MSPF\MSPF\MSPF\obj\Debug\MSPF.csprojResolveAssemblyReference.cache

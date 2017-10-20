@@ -57,19 +57,34 @@ namespace MSPF.Migrations
 
 
             var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new MSPFContext()));
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new MSPFContext()));
 
             var user = new ApplicationUser()
             {
-                UserName = "admin",
-                Email = "admin@mspf.com",
+                UserName = "superadmin",
+                Email = "superadmin@mspf.com",
                 EmailConfirmed = true,
-                //FirstName = "admin",
-                //LastName = "test",
+                FirstName = "admin",
+                LastName = "test",
                 Level = 1,
                 JoinDate = DateTime.Now
             };
 
             manager.Create(user, "abc@1234");
+
+            if (!roleManager.Roles.Any())
+            {
+                roleManager.Create(new IdentityRole { Name = "SuperAdmin" });
+                roleManager.Create(new IdentityRole { Name = "Admin" });
+                roleManager.Create(new IdentityRole { Name = "Seller" });
+                roleManager.Create(new IdentityRole { Name = "Buyer" });
+            }
+
+            var adminUser = manager.FindByName("superadmin");
+
+            manager.AddToRoles(adminUser.Id, "SuperAdmin", "Admin");
+
+
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
             //

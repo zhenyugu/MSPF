@@ -235,8 +235,10 @@
     <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\GoodsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Controllers\ShopsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Infrastucture\ApplicationRoleManager.cs" />
     <Compile Include="Infrastucture\ApplicationUser.cs" />
     <Compile Include="Infrastucture\ApplicationUserManager.cs" />
     <Compile Include="Migrations\201710171020570_Initial.cs" />
@@ -245,6 +247,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ChangePasswordBindingModel.cs" />
+    <Compile Include="Models\CreateRoleBindingModel.cs" />
     <Compile Include="Models\CreateUserBindingModel.cs" />
     <Compile Include="Models\Goods.cs" />
     <Compile Include="Models\ModelFactory.cs" />
