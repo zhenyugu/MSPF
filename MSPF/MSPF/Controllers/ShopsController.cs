@@ -13,6 +13,7 @@ using MSPF.Models;
 
 namespace MSPF.Controllers
 {
+    [Authorize]
     public class ShopsController : ApiController
     {
         private MSPFContext db = new MSPFContext();

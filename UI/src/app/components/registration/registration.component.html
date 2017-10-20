@@ -1,8 +1,8 @@
 <div class="container">
-  <h1>Registration</h1>
+  <h1>注册</h1>
   <form (ngSubmit)="register()" #registrationForm="ngForm">
     <div class="form-group">
-      <label for="uesrname">姓名</label>
+      <label for="uesrname">昵称</label>
       <input type="text" class="form-control" id="uesrname" name="uesrname" [(ngModel)]="model.Username" required>
     </div>
 
@@ -21,7 +21,7 @@
       <input type="text" class="form-control" name="ConfirmPassword" [(ngModel)]="model.ConfirmPassword" id="confirmPassword">
     </div>
 
-    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="submit" class="btn btn-success">注册</button>
 
   </form>
 </div>

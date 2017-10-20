@@ -1,0 +1,49 @@
+<div class="panel-body">
+  <form class="form-horizontal mr-lg" #goodsDetailsForm="ngForm">
+    <div class="form-group">
+      <label class="col-sm-12 required-identifier-after">货号</label>
+      <div class="col-sm-12">
+        <input type="text" class="form-control" id="goodsId" name="goodsId" [(ngModel)]="goods.Id" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-12 required-identifier-after">货品名</label>
+      <div class="col-sm-12">
+        <input type="text" class="form-control" id="goodsName" name="goodsName" [(ngModel)]="goods.Name" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-12 required-identifier-after">原价</label>
+      <div class="col-sm-12">
+        <input type="text" class="form-control" id="goodsOfficialPrice" name="goodsOfficialPrice" [(ngModel)]="goods.OfficialPrice"
+          required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-12 required-identifier-after">现价</label>
+      <div class="col-sm-12">
+        <input type="text" class="form-control" id="goodsPrice" name="goodsPrice" [(ngModel)]="goods.Price" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-12 required-identifier-after">库存</label>
+      <div class="col-sm-12">
+        <input type="text" class="form-control" id="goodsVacancy" name="goodsVacancy" [(ngModel)]="goods.Vacancy" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-12 required-identifier-after">描述</label>
+      <div class="col-sm-12">
+        <textarea class="form-control" rows="3" id="goodsDescription" name="goodsDescription" [(ngModel)]="goods.Description"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-12 required-identifier-after">相关图片</label>
+      <div class="col-sm-12">
+        <input type="file" id="exampleInputFile">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">发布</button>
+    <button type="button" (click)="Reject()" class="btn btn-default">放弃</button>
+  </form>
+</div>

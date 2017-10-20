@@ -18,7 +18,6 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(1);
     this.router.navigate(['/seller'], { relativeTo: this.route });
   }
 

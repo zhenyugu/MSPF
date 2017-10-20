@@ -5,6 +5,7 @@ import { SellerComponent } from './seller.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { GoodsManagementComponent } from './goods-management/goods-management.component';
 import { OrdersManagementComponent } from './orders-management/orders-management.component';
+import { GoodsDetailsComponent } from './goods-management/goods-details/goods-details.component';
 const routes: Routes = [
   {
     path: '', component: SellerComponent,
@@ -17,7 +18,9 @@ const routes: Routes = [
         path: 'dashboard', component: DashboardComponent
       },
       {
-        path: 'goodsManagement', component: GoodsManagementComponent
+        path: 'goodsManagement', component: GoodsManagementComponent, children: [{
+          path: 'goodsDetails', component: GoodsDetailsComponent
+        }]
       },
       {
         path: 'ordersManagement', component: OrdersManagementComponent
