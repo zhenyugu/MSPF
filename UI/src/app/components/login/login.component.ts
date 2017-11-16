@@ -22,6 +22,8 @@ export class LoginComponent implements OnInit {
     this.loginService.login(this.username, this.password).then(data => {
       console.log(data);
       this.router.navigate(['/seller'], { relativeTo: this.route });
+    }, () => {
+      console.log('fail');
     }
     ).catch(error => { console.log(error); });
   }

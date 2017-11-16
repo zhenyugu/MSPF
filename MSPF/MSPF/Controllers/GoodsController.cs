@@ -13,17 +13,22 @@ using MSPF.Models;
 
 namespace MSPF.Controllers
 {
+   
     public class GoodsController : ApiController
     {
         private MSPFContext db = new MSPFContext();
 
         // GET: api/Goods
+        [HttpGet]
+        [Route("api/goods")]
         public IQueryable<Goods> GetGoods()
         {
             return db.Goods.Include(r => r.Shop);
         }
 
         // GET: api/Goods/5
+        [HttpGet]
+        [Route("api/goods/{id}")]
         [ResponseType(typeof(Goods))]
         public async Task<IHttpActionResult> GetGoods(int id)
         {
@@ -37,6 +42,8 @@ namespace MSPF.Controllers
         }
 
         // PUT: api/Goods/5
+        [HttpPut]
+        [Route("api/goods/{id}")]
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutGoods(int id, Goods goods)
         {
@@ -72,6 +79,7 @@ namespace MSPF.Controllers
         }
 
         // POST: api/Goods
+        [Route("api/goods")]
         [ResponseType(typeof(Goods))]
         public async Task<IHttpActionResult> PostGoods(Goods goods)
         {
@@ -87,6 +95,8 @@ namespace MSPF.Controllers
         }
 
         // DELETE: api/Goods/5
+        [HttpDelete]
+        [Route("api/goods/{id}")]
         [ResponseType(typeof(Goods))]
         public async Task<IHttpActionResult> DeleteGoods(int id)
         {

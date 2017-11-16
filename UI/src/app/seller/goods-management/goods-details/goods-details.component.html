@@ -1,5 +1,5 @@
 <div class="panel-body">
-  <form class="form-horizontal mr-lg" #goodsDetailsForm="ngForm">
+  <form class="form-horizontal mr-lg" (ngSubmit)="addGoods()" #goodsDetailsForm="ngForm">
     <div class="form-group">
       <label class="col-sm-12 required-identifier-after">货号</label>
       <div class="col-sm-12">
@@ -12,6 +12,16 @@
         <input type="text" class="form-control" id="goodsName" name="goodsName" [(ngModel)]="goods.Name" required>
       </div>
     </div>
+
+    <div class="form-group">
+      <label for="type" class="col-sm-12 required-identifier-after">分类</label>
+      <select class="form-control" id="type" 
+              required
+              [(ngModel)]="goods.Type" name="type">
+        <option *ngFor="let type of types" [value]="type">{{type}}</option>
+      </select>
+    </div>
+
     <div class="form-group">
       <label class="col-sm-12 required-identifier-after">原价</label>
       <div class="col-sm-12">
@@ -37,13 +47,15 @@
         <textarea class="form-control" rows="3" id="goodsDescription" name="goodsDescription" [(ngModel)]="goods.Description"></textarea>
       </div>
     </div>
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label class="col-sm-12 required-identifier-after">相关图片</label>
       <div class="col-sm-12">
         <input type="file" id="exampleInputFile">
       </div>
-    </div>
+    </div> -->
     <button type="submit" class="btn btn-primary">发布</button>
-    <button type="button" (click)="Reject()" class="btn btn-default">放弃</button>
+    <button type="button" (click)="reject()" class="btn btn-default">放弃</button>
   </form>
 </div>
+TODO: remove this: {{goods.power}}
+TODO: remove this: {{goods.Type}}

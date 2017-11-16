@@ -5,4 +5,10 @@ import { Headers, Http } from '@angular/http';
 export class AppConfigService {
 
   constructor(private http: Http) { }
+
+  apiBaseUrl = 'http://localhost:6596/api';
+
+  getApiBaseUrl() {
+    return this.apiBaseUrl;
+  }
 }
